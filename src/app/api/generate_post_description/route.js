@@ -1,10 +1,8 @@
 import {NextResponse} from "next/server";
 
-const API_KEY = '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'
+const API_KEY = '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'
 export async function POST(request, response) {
     const body = await request.json()
-
-    console.log(body.img_url[0])
 
     const data = await fetch('https://api.openai.com/v1/chat/completions', {
         method: 'POST',
@@ -14,14 +12,13 @@ export async function POST(request, response) {
         },
         body: JSON.stringify({
             "model": "gpt-4-vision-preview",
-            // "messages": [{"role": "user", "content": body.content}]
             "messages": [
                 {
                     "role": "user",
                     "content": [
                         {
                             "type": "text",
-                            "text": "What’s in this image?"
+                            "text": body.text
                         },
                         {
                             "type": "image_url",

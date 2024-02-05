@@ -53,10 +53,10 @@ export const ProductInformation = ({product}) => {
             DESCRIPTION
         </div>
         <div className={s.product_description}>
-            <OutputDescription description={product.description}/>
+            <OutputDescription description={product.description} name={product.name}/>
         </div>
 
-        <GenerateDescription keyWords={product.description} img_url={product.header_image}/>
+        <GenerateDescription name={product.name} category={product.category} keyWords={product.description} img_url={product.header_image}/>
 
         <Link href={'/shop'} className={s.back_btn}>
             {'< '}BACK TO SHOP
