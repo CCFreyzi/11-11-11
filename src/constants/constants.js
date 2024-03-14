@@ -14,4 +14,4 @@ export const ROLE = {
   assistant: "assistant",
 };
 
-export const FILE_NAME = `Data from DB.txt`;
+export const FILE_NAME = `Data_from_DB.txt`;
