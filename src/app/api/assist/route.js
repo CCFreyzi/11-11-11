@@ -103,7 +103,7 @@ const assistantFilesUploader = async () => {
 export const POST = async (request, response) => {
   const { userMessage } = await request.json();
 
-  await assistantFilesUploader();
+  // await assistantFilesUploader();
 
   // ==========  Step 1: Create a Thread
   const thread = await openai.beta.threads.create();
