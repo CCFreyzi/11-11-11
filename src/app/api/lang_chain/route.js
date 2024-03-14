@@ -2,7 +2,6 @@ import OpenAI from "openai";
 import axios from "axios";
 import { NextResponse } from "next/server";
 import * as fs from "fs";
-// import { RecursiveJsonSplitter } from "langchain";
 
 import { filePath } from "../get_categories/route";
 
